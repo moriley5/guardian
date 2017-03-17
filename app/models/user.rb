@@ -1,0 +1,10 @@
+class User < ActiveRecord::Base
+
+  has_many :guardian_profiles
+
+  validates :first_name, :last_name, :email, :password_digest, :access_token, presence: true
+  validates :email, uniqueness: true
+
+  has_secure_password
+
+end
