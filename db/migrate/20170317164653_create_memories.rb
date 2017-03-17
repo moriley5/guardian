@@ -4,7 +4,7 @@ class CreateMemories < ActiveRecord::Migration
       t.integer :guardian_id, null: false
       t.string :audio_recording, null: false
       t.string :description, null: false
-      t.date :date
+      t.datetime :date
       t.timestamps(null: false)
     end
   end

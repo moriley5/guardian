@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20170317164939) do
     t.integer  "guardian_id",     null: false
     t.string   "audio_recording", null: false
     t.string   "description",     null: false
-    t.date     "date"
+    t.datetime "date"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20170317164939) do
     t.string   "last_name",       null: false
     t.string   "email",           null: false
     t.string   "password_digest", null: false
+    t.string   "access_token"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
