@@ -1,4 +1,4 @@
-<h2> <%= @user.first_name %> </h2>
+<h1> <%= @user.first_name %> </h1>
 
 <%= link_to "Add Guardian", new_guardian_profile_path %>
 <br>
@@ -7,9 +7,10 @@
 <div>
   <% @guardians.each do |guardian| %>
     <p>
-      <%= link_to guardian.title, guardian_profile_path(guardian) %>
-      <br>
+      <h2><%= link_to guardian.title, guardian_profile_path(guardian)%></h2>
       <%= guardian.image %>
+      <br>
+      <%= link_to "Edit", edit_guardian_profile_path %>
     </p>
   <% end %>
 </div>
