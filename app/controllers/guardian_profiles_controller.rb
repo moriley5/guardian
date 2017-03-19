@@ -4,9 +4,18 @@ class GuardianProfilesController < ApplicationController
   end
 
   def new
+    @guardian = GuardianProfile.new
   end
 
   def create
+    @guardian = GuardianProfile.new(guardian_params)
+
+    if @guardian.save
+      redirect_to guardian_profile_path(@guardian)
+    else
+      @errors = @guardian.errors.full_messages
+      render 'new'
+    end
   end
 
   def show
@@ -19,4 +28,11 @@ class GuardianProfilesController < ApplicationController
 
   def update
   end
+
+  private
+
+  def guardian_params
+    params.require(:guardian_profile).permit(:user_id, :title, :image, :picture)
+  end
+
 end
