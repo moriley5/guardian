@@ -4,7 +4,7 @@
 
 <%= form_for [:guardian_profile, @memory] do |f| %>
   <p>
-    <%= f.hidden_field :guardian_id, {:value => :guardian_profile_id} %>
+    <%= f.hidden_field :guardian_id, {:value => @guardian.id} %>
     <%= f.label :description %>
     <%= f.text_field :description %>
   </p>
