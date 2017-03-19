@@ -1,2 +1,25 @@
-<h1>GuardianProfiles#new</h1>
-<p>Find me in app/views/guardian_profiles/new.html.erb</p>
+<h1>New Guardian</h1>
+
+<%= render '/errors' %>
+
+<%= form_for @guardian do |f| %>
+  <p>
+    <%= f.hidden_field :user_id, {:value => current_user.id} %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </p>
+
+  <p>
+    <%= f.label :picture %>
+    <%= f.file_field :picture %>
+  </p>
+
+  <p>
+    <%= f.submit "Add Guardian" %>
+  </p>
+<% end %>
