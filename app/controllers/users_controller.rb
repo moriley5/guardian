@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     redirect_home
     authorize_to_view(@user.id) if @user
     @user = current_user
-    @guardians = @user.guardian_profiles
+    @guardians = @user.guardian_profiles.sort_by &:title
   end
 
   private
