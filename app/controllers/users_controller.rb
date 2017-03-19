@@ -19,6 +19,7 @@ class UsersController < ApplicationController
     redirect_home
     authorize_to_view(@user.id) if @user
     @user = current_user
+    @guardians = @user.guardian_profiles
   end
 
   private

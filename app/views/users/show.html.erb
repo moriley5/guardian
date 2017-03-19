@@ -1,2 +1,9 @@
 <h2> <%= @user.first_name %> </h2>
-<p>Find me in app/views/users/show.html.erb</p>
+
+<div>
+  <% @guardians.each do |guardian| %>
+    <%= link_to guardian.title, guardian_profile_path(guardian) %>
+    <br>
+    <%= guardian.image %>
+  <% end %>
+</div>
