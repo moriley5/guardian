@@ -1,7 +1,10 @@
 <h1>New Memory</h1>
 
+<%= render '/errors' %>
+
 <%= form_for [:guardian_profile, @memory] do |f| %>
   <p>
+    <%= f.hidden_field :guardian_id, {:value => :guardian_profile_id} %>
     <%= f.label :description %>
     <%= f.text_field :description %>
   </p>
