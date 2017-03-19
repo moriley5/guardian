@@ -1,4 +1,4 @@
-class CreateGuardianProfiles < ActiveRecord::Migration
+class CreateGuardianProfiles < ActiveRecord::Migration[5.0]
   def change
     create_table :guardian_profiles do |t|
       t.integer :user_id, null: false
