@@ -6,11 +6,11 @@ class MemoriesController < ApplicationController
 
   def create
     @memory = Memory.new(memory_params)
-
+    @guardian = GuardianProfile.find_by(id: params[:guardian_id])
     if @memory.save
-      redirect_to guardian_profile
+      redirect_to guardian_profile_path(@guardian)
     else
-      @errors = @memory.errors_full_messages
+      @errors = @memory.errors.full_messages
       render 'new'
     end
   end
