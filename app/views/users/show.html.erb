@@ -6,8 +6,10 @@
 
 <div>
   <% @guardians.each do |guardian| %>
-    <%= link_to guardian.title, guardian_profile_path(guardian) %>
-    <br>
-    <%= guardian.image %>
+    <p>
+      <%= link_to guardian.title, guardian_profile_path(guardian) %>
+      <br>
+      <%= guardian.image %>
+    </p>
   <% end %>
 </div>
