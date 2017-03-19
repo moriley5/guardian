@@ -15,14 +15,13 @@ gem "paperclip", "~> 5.0.0"
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'web-console', '~> 2.0'
   gem 'rspec-rails', '~> 3.5'
   gem 'rails-controller-testing'
   gem 'rake'
 end
 
 group :development do
-  gem 'web-console'
+  gem 'web-console', '~> 2.0'
   gem 'pry'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
