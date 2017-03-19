@@ -6,6 +6,6 @@ class Memory < ApplicationRecord
   has_attached_file :audio
 
   def formatted_date
-    date.strftime("%m/%d/%Y")
+    self.date.strftime("%m/%d/%Y")
   end
 end
