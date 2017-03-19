@@ -1,4 +1,4 @@
-class CreateMemories < ActiveRecord::Migration
+class CreateMemories < ActiveRecord::Migration[5.0]
   def change
     create_table :memories do |t|
       t.integer :guardian_id, null: false
