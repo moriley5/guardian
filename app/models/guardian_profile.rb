@@ -6,3 +6,5 @@ class GuardianProfile < ActiveRecord::Base
   validates :user_id, :title, :image, presence: true
 
 end
+
+#
