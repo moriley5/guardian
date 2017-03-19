@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root "guardian_profiles#index"
 
   resources :users, only: [:new, :create, :show]
-  resources :sessions, only: [:new, :create, :delete]
+  resources :sessions, only: [:new, :create]
 
   resources :guardian_profiles, only: [:new, :create, :show, :edit, :update] do
     resources :memories, only: [:new, :create, :edit, :update]
