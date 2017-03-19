@@ -10,6 +10,8 @@ class GuardianProfilesController < ApplicationController
   end
 
   def show
+    @guardian = GuardianProfile.find_by(id: params[:id])
+    @memories = @guardian.memories
   end
 
   def edit

@@ -1,2 +1,9 @@
-<h1>GuardianProfiles#show</h1>
-<p>Find me in app/views/guardian_profiles/show.html.erb</p>
+<h1> <%= @guardian.title %> </h1>
+
+<% @memories.each do |memory| %>
+  <div>
+    <p><%= memory.description %></p>
+    <p><%= memory.audio_recording %></p>
+    <p><%= memory.formatted_date %></p>
+  </div>
+<% end %>
