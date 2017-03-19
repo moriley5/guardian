@@ -1,5 +1,9 @@
 <h2> <%= @user.first_name %> </h2>
 
+<%= link_to "Add Guardian", new_guardian_profile_path %>
+<br>
+<br>
+
 <div>
   <% @guardians.each do |guardian| %>
     <%= link_to guardian.title, guardian_profile_path(guardian) %>

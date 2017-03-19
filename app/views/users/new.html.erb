@@ -2,29 +2,34 @@
 
 <%= render '/errors' %>
 
-<div class="sign-up">
+<div>
   <%= form_for @user do |f| %>
-    <p class="sign-up-item">
+    <p>
     <%= f.label :first_name %>
     <%= f.text_field :first_name %>
     </p>
 
-    <p class="sign-up-item">
+    <p>
     <%= f.label :last_name %>
     <%= f.text_field :last_name %>
     </p>
 
-    <p class="sign-up-item">
+    <p>
     <%= f.label :email %>
     <%= f.text_field :email %>
     </p>
 
-    <p class="sign-up-item">
+    <p>
     <%= f.label :password %>
     <%= f.password_field :password %>
     </p>
 
-    <p class="sign-up-item">
+    <p>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+    </p>
+
+    <p>
     <%= f.submit "Register"%>
     </p>
   <% end %>
