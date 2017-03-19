@@ -5,6 +5,6 @@ class UsersController < ApplicationController
   def create
   end
 
-  def profile
+  def show
   end
 end
