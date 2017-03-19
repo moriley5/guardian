@@ -6,8 +6,8 @@
 
 <% @memories.each do |memory| %>
   <div>
-    <h3><%= memory.description %></h3>
-    <p><%= memory.audio_recording %></p>
+    <p><%= memory.description %></p>
+    <p><%= memory.audio %></p>
     <p><%= memory.formatted_date %></p>
     <p><%= link_to "Edit", edit_guardian_profile_memory_path(@guardian) %></p>
   </div>

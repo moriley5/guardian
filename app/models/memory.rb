@@ -3,8 +3,10 @@ class Memory < ApplicationRecord
 
   has_attached_file :audio
 
-  validates :guardian_id, :audio_recording, :description, presence: true
-  validates_attachment :audio, presence: true, content_type: {content_type: "audio/mpeg"}, size: { in: 0..100.kilobytes }
+  validates :guardian_id, :description, presence: true
+  validates_attachment :audio, :presence => true,
+    :content_type => {:content_type => "audio/x-m4a" },
+    :size => { in: 0..500.kilobytes }
 
 
 

@@ -44,7 +44,7 @@ class GuardianProfilesController < ApplicationController
 
   private
   def guardian_params
-    params.require(:guardian_profile).permit(:user_id, :title, :image, :picture)
+    params.require(:guardian_profile).permit(:user_id, :title, :image)
   end
 
 end

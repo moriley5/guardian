@@ -16,20 +16,15 @@ ActiveRecord::Schema.define(version: 20170319020631) do
   enable_extension "plpgsql"
 
   create_table "guardian_profiles", force: :cascade do |t|
-    t.integer  "user_id",              null: false
-    t.string   "title",                null: false
-    t.string   "image",                null: false
-    t.string   "picture_file_name"
-    t.string   "picture_content_type"
-    t.integer  "picture_file_size"
-    t.datetime "picture_updated_at"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.integer  "user_id",    null: false
+    t.string   "title",      null: false
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "memories", force: :cascade do |t|
     t.integer  "guardian_id",        null: false
-    t.string   "audio_recording",    null: false
     t.string   "audio_file_name"
     t.string   "audio_content_type"
     t.integer  "audio_file_size"
@@ -45,7 +40,6 @@ ActiveRecord::Schema.define(version: 20170319020631) do
     t.string   "last_name",       null: false
     t.string   "email",           null: false
     t.string   "password_digest", null: false
-    t.string   "access_token"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
