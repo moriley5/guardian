@@ -8,6 +8,21 @@
 </head>
 <body>
 
+  <header class="main-header">
+    <h1>Guardian</h1>
+      <nav class="main-nav">
+        <ul class="main-list">
+          <% if !logged_in? %>
+            <li class="main-list-item"> <%= link_to "Login", new_session_path %></li>
+            <li class="main-list-item"> <%= link_to "Register", new_user_path %></li>
+          <% else %>
+            <li class="main-list-item"> <%= link_to "Logout", logout_path %></li>
+          <% end %>
+          <li class="main-list-item"> <%= link_to "Home", root_path %>  </li>
+        </ul>
+      </nav>
+    </header>
+
 <%= yield %>
 
 </body>

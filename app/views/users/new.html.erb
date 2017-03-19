@@ -1,2 +1,31 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1 class="heading">User Registration</h1>
+
+<%= render '/errors' %>
+
+<div class="sign-up">
+  <%= form_for @user do |f| %>
+    <p class="sign-up-item">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+    </p>
+
+    <p class="sign-up-item">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+    </p>
+
+    <p class="sign-up-item">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    </p>
+
+    <p class="sign-up-item">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    </p>
+
+    <p class="sign-up-item">
+    <%= f.submit "Register"%>
+    </p>
+  <% end %>
+</div>
