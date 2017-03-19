@@ -1,5 +1,9 @@
 <h1> <%= @guardian.title %> </h1>
 
+<%= link_to "Add Memory", new_guardian_profile_memory_path(@guardian) %>
+<br>
+<br>
+
 <% @memories.each do |memory| %>
   <div>
     <p><%= memory.description %></p>

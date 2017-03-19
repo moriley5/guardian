@@ -6,21 +6,22 @@
 
   <%= render '/errors' %>
 
-  <div class="login">
+  <div>
     <%= form_tag sessions_path do %>
-      <p class="login-item">
-      <%= label_tag :email %>
-      <%= text_field_tag :email %>
+      <p>
+        <%= label_tag :email %>
+        <%= text_field_tag :email %>
       </p>
 
-      <p class="login-item">
-      <%= label_tag :password %>
-      <%= password_field_tag :password %>
+      <p>
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
       </p>
 
-      <p class="login-item">
-      <%= submit_tag "Login"%>
+      <p>
+        <%= submit_tag "Login"%>
       </p>
+
     <% end %>
   </div>
 </div>

@@ -15,9 +15,9 @@
             <li class="main-list-item"> <%= link_to "Login", new_session_path %></li>
             <li class="main-list-item"> <%= link_to "Register", new_user_path %></li>
           <% else %>
+            <li class="main-list-item"> <%= link_to "Home", user_path(current_user) %>  </li>
             <li class="main-list-item"> <%= link_to "Logout", logout_path %></li>
           <% end %>
-          <li class="main-list-item"> <%= link_to "Home", root_path %>  </li>
         </ul>
       </nav>
     </header>
