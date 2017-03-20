@@ -5,8 +5,7 @@
 <br>
 
 <% @memories.each do |memory| %>
-  <div>
     <p><%= memory.description %></p>
-    <%= audio_tag "/system/memories/audios/000/000/001/original/PoppaSinging.m4a", controls: true, autoplay: false %>
+    <%= audio_tag memory.audio, controls: true, autoplay: false %>
     <p><%= memory.formatted_date %></p>
 <% end %>
