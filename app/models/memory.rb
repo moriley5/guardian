@@ -5,8 +5,8 @@ class Memory < ApplicationRecord
 
   validates :guardian_id, :description, presence: true
   validates_attachment :audio, :presence => true,
-    :content_type => {:content_type => "audio/x-m4a" },
     :size => { in: 0..500.kilobytes }
+  validates_attachment_content_type :audio, :content_type => ["audio/x-m4a", "audio/m4a"]
 
 
 
