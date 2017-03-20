@@ -1,6 +1,6 @@
 user = User.create!(first_name: "Mo", last_name: "Riley", email: "moriley5@gmail.com", password: "password")
-guardian = user.guardian_profiles.create!(title: "Poppa", image: "image.jpeg")
-memory = guardian.memories.create!(description: "Grandpa reading Christmas story", date: DateTime.new(1996,12,25), audio: File.open("#{Rails.root}/app/assets/audios/ChristmasEve.m4a"))
+# guardian = user.guardian_profiles.create!(title: "Poppa", image: "image.jpeg")
+# memory = guardian.memories.create!(description: "Grandpa reading Christmas story", date: DateTime.new(1996,12,25), audio: File.open("#{Rails.root}/app/assets/audios/ChristmasEve.m4a"))
 # memory2 = guardian.memories.create!(audio_recording: "audio2.mp3", description: "Words of advice", date: DateTime.new(2005,8,16))
 # memory3 = guardian.memories.create!(audio_recording: "audio3.mp3", description: "Grandpa says 'hi'", date: DateTime.new(2001,11,18))
 # memory4 = guardian.memories.create!(audio_recording: "audio4.mp3", description: "Words of encouragement", date: DateTime.new(2011,1,16))
