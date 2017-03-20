@@ -8,7 +8,7 @@
   <% @guardians.each do |guardian| %>
     <p>
       <h2><%= link_to guardian.title, guardian_profile_path(guardian)%></h2>
-      <%= image_tag guardian.image.url(:thumb) %>
+      <%= image_tag guardian.image.url(:thumb), protocol: "https" %>
       <br>
       <%= link_to "Edit", edit_guardian_profile_path %>
     </p>
