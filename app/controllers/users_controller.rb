@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
   def new
+    respond_to do |format|
+      format.js{}
+      format.html{}
+    end
     @user = User.new
   end
 

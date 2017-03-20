@@ -10,18 +10,16 @@
 <body>
 
   <header>
-      <nav>
+    <h1>Guardian</h1>
+      <nav class="main-page-nav">
         <ul>
-          <% if !logged_in? %>
-            <li> <%= link_to "Login", new_session_path %></li>
-            <li> <%= link_to "Register", new_user_path %></li>
-          <% else %>
+          <% if logged_in? %>
             <li> <%= link_to "Home", user_path(current_user) %>  </li>
             <li> <%= link_to "Logout", logout_path %></li>
           <% end %>
         </ul>
       </nav>
-    </header>
+  </header>
 
 <%= yield %>
 
