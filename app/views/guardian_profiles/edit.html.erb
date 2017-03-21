@@ -1,23 +1,13 @@
-<h1>Edit Guardian</h1>
+<h3>Edit Guardian</h3>
 
 <%= render '/errors' %>
 
-<div>
-  <%= form_for @guardian, {url: guardian_profile_path, method: :put} do |f| %>
-    <p>
-      <%= f.label :title %>
-      <%= f.text_field :title%>
-    </p>
+<%= bootstrap_form_for @guardian, {url: guardian_profile_path, method: :put} do |f| %>
+  <%= f.text_field :title%>
 
-    <p>
-      <%= f.label :image %>
-      <%= f.file_field :image %>
-    </p>
+  <%= f.file_field :image %>
 
-    <p>
-      <%= f.submit "Update" %>
-    </p>
-  <% end %>
-</div>
+  <%= f.submit "Update" %>
+<% end %>
 
 

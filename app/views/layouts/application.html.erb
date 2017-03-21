@@ -5,22 +5,38 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
 
   <header>
-    <h1>Guardian</h1>
-      <nav class="main-page-nav">
-        <ul>
-          <% if logged_in? %>
-            <li> <%= link_to "Home", user_path(current_user) %>  </li>
-            <li> <%= link_to "Logout", logout_path %></li>
-          <% end %>
-        </ul>
-      </nav>
+    <nav class="main-page-nav navbar navbar-default" role="navigation">
+      <div class="container-fluid" >
+        <% if !logged_in? %>
+          <div class="navbar-header">
+            <%= link_to "Login",
+                { :controller => 'sessions', :action => 'new'},
+                :class => "navbar-brand"  %>
+          </div>
+          <div class="navbar-header">
+            <%= link_to "Register",
+                { :controller => 'users', :action => 'new' },
+                :class => "navbar-brand"  %>
+          </div>
+        <% else %>
+          <div class="navbar-header">
+            <%= link_to "Home", user_path(current_user), class: "navbar-brand" %>
+          </div>
+          <div class="navbar-header">
+            <%= link_to "Logout",
+                { :controller => 'sessions', :action => 'destroy' },
+                :class => "navbar-brand"%>
+          </div>
+        <% end %>
+      </div>
+    </nav>
   </header>
-
 <%= yield %>
 
 </body>
