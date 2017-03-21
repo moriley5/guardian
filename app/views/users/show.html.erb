@@ -12,18 +12,16 @@
       <% end %>
     </div>
   </div>
-  <div id="main-content" class="col-xs-9">
 
-
-        <input id="speech" type="text">
-        <button id="rec" class="btn">Speak</button>
+  <% if @guardians.count >= 1 %>
+    <div id="main-content" class="col-xs-9">
+      <input id="speech" type="text">
+      <button id="rec" class="btn">Speak</button>
         <div id="spokenResponse" class="spoken-response">
           <div class="spoken-response__text"></div>
+          <% end %>
         </div>
-      </div>
-      <br>
-
-
-
+    </div>
+    <br>
   </div>
 </div>
