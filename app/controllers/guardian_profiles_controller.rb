@@ -1,10 +1,7 @@
 class GuardianProfilesController < ApplicationController
 
-
   def index
-
   end
-
 
   def new
     @guardian = GuardianProfile.new
