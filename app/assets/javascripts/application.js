@@ -106,17 +106,18 @@ function send() {
             "Authorization": "Bearer " + accessToken
         },
         data: JSON.stringify({query: text, lang: "en", sessionId: "guardian"}),
-        success: function(data) {
+        success: function(data, status, object) {
             prepareResponse(data);
-            // if (data.result.speech === "Connecting you with your guardian now...") {
-            //   var guardian = data.result.resolvedQuery
-            //   $.ajax({
-            //     type: "GET",
-            //     url: '/'
-            //   }).done(function(response){
-            //     console.log(response)
-            //   })
-            // }
+            if (data.result.speech === "Connecting you with your guardian now...") {
+              var guardian = data.result.resolvedQuery
+              $.ajax({
+                type: "GET",
+                url: '/users',
+                data: guardian
+              }).done(function(response){
+                $("div#sidebar").append(response);
+              })
+            }
         },
         error: function() {
             respond(messageInternalError);

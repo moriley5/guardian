@@ -1,4 +1,17 @@
 class UsersController < ApplicationController
+
+  def index
+    if request.xhr?
+      @guardians = current_user.guardian_profiles
+      @guardians.each do |guardian|
+        if guardian.title == request.query_string
+          @memory = guardian.memories.first
+        end
+      end
+        render '_audio', layout: false, locals: {memory: @memory} and return
+    end
+  end
+
   def new
     @user = User.new
     respond_to do |format|

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root "application#index"
 
-  resources :users, only: [:new, :create, :show]
+  resources :users, only: [:index, :new, :create, :show]
   resources :sessions, only: [:new, :create]
 
   resources :guardian_profiles, only: [:new, :create, :show, :edit, :update] do
