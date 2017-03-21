@@ -2,25 +2,14 @@
 
 <%= render '/errors' %>
 
-<%= form_for [:guardian_profile, @memory] do |f| %>
-  <p>
-    <%= f.hidden_field :guardian_id, {:value => @guardian.id} %>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </p>
+<%= bootstrap_form_for [:guardian_profile, @memory] do |f| %>
+  <%= f.hidden_field :guardian_id, {:value => @guardian.id} %>
+  <%= f.text_field :description %>
 
-  <p>
-    <%= f.label :audio %>
-    <%= f.file_field :audio %>
-  </p>
+  <%= f.file_field :audio %>
 
-  <p>
-    <%= f.label "Date of Memory" %>
-    <%= f.date_field :date %>
-  </p>
+  <%= f.date_field :date %>
 
-  <p>
-    <%= f.submit "Add Memory" %>
-  </p>
+  <%= f.submit "Add Memory" %>
 <% end %>
 

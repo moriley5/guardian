@@ -12,8 +12,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 gem 'paperclip', '~> 5.0.0'
 gem 'aws-sdk', '~> 2.3'
+gem 'bootstrap_form'
 
 group :development, :test do
   gem 'byebug', platform: :mri

@@ -24,4 +24,8 @@ class ApplicationController < ActionController::Base
   def redirect_home
     redirect_to root_path if !logged_in?
   end
+
+  def index
+  end
+
 end

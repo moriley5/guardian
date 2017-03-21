@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
 
 var accessToken = "e0fd6a9bcb9a437eb80cb8834078f86e",

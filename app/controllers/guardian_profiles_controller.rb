@@ -1,8 +1,10 @@
 class GuardianProfilesController < ApplicationController
 
+
   def index
 
   end
+
 
   def new
     @guardian = GuardianProfile.new
@@ -12,7 +14,7 @@ class GuardianProfilesController < ApplicationController
     @guardian = GuardianProfile.new(guardian_params)
 
     if @guardian.save
-      redirect_to guardian_profile_path(@guardian)
+      redirect_to user_path(current_user)
     else
       @errors = @guardian.errors.full_messages
       render 'new'

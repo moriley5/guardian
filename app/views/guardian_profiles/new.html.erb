@@ -1,20 +1,13 @@
-<h1>New Guardian</h1>
+<h3>New Guardian</h3>
 
 <%= render '/errors' %>
 
-<%= form_for @guardian do |f| %>
-  <p>
+<%= bootstrap_form_for @guardian do |f| %>
     <%= f.hidden_field :user_id, {:value => current_user.id} %>
-    <%= f.label :title %>
+
     <%= f.text_field :title %>
-  </p>
 
-  <p>
-    <%= f.label :image %>
     <%= f.file_field :image %>
-  </p>
 
-  <p>
     <%= f.submit "Add Guardian" %>
-  </p>
 <% end %>
