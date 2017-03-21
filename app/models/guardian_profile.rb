@@ -1,5 +1,6 @@
 class GuardianProfile < ApplicationRecord
   has_many :memories, foreign_key: :guardian_id
+  has_many :notes, foreign_key: :guardian_id
   belongs_to :user
 
   has_attached_file :image, styles: { medium: "150x150>", thumb: "75x75>" }
