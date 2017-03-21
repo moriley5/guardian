@@ -1,0 +1,29 @@
+.navbar {
+  margin-bottom: 1px !important;
+}
+
+* {
+  background-color: #1f1f2e;
+  color: #f5f4f6;
+}
+
+.avatar-image {
+  width: 33%;
+  border: 2px solid;
+  border-radius: 25px;
+}
+
+.edit-image {
+  border: 2px solid;
+  border-radius: 10px;
+}
+
+.form-field {
+  background-color: blue
+}
+
+
+h1 h2 h3 {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}

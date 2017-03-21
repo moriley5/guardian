@@ -1,16 +1,19 @@
-<h1> <%= @guardian.title %> </h1>
-<%= image_tag @guardian.image.url, protocol: "https"  %>
+<div id="main-container" class="container-fluid">
+  <div class="col-ms-6">
+    <h1> <%= @guardian.title %> </h1>
+    <%= image_tag @guardian.image.url, protocol: "https", class: "avatar-image"  %>
 
-<%= link_to "Add Memory", new_guardian_profile_memory_path(@guardian) %>
-<br>
-<br>
-
-<% @memories.each do |memory| %>
-    <h3><%= memory.description %></h3>
-    <%= audio_tag memory.audio.url, controls: true, autoplay: false, protocol: "https"  %>
-    <p><%= memory.formatted_date %></p>
-    <p><%= link_to "Edit", edit_guardian_profile_memory_path(@guardian, memory) %></p>
-<% end %>
+    <%= link_to "Add Memory", new_guardian_profile_memory_path(@guardian) %>
+  </div>
+  <div class="col-ms-6">
+    <% @memories.each do |memory| %>
+        <h3><%= memory.description %></h3>
+        <%= audio_tag memory.audio.url, controls: true, autoplay: false, protocol: "https"  %>
+        <p><%= memory.formatted_date %></p>
+        <p><%= link_to "Edit", edit_guardian_profile_memory_path(@guardian, memory) %></p>
+    <% end %>
+  </div>
+</div>
 
 
 
