@@ -5,7 +5,7 @@ class UsersController < ApplicationController
       @guardians = current_user.guardian_profiles
       @guardians.each do |guardian|
         if request.query_string.downcase.include?(guardian.title.downcase)
-          @memory = guardian.memories.sample
+          @memory = guardian.memories.sampleç
         end
       end
         render '_audio', layout: false, locals: {memory: @memory} and return
