@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "guardian_profiles#index"
+  root "application#index"
 
   resources :users, only: [:new, :create, :show]
   resources :sessions, only: [:new, :create]

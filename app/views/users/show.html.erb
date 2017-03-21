@@ -1,16 +1,17 @@
-<h1> <%= @user.first_name %>'s Guardians </h1>
-
-<%= link_to "Add Guardian", new_guardian_profile_path %>
-<br>
-<br>
-
-<div>
-  <% @guardians.each do |guardian| %>
-    <p>
-      <h2><%= link_to guardian.title, guardian_profile_path(guardian)%></h2>
-      <%= image_tag guardian.image.url(:thumb), protocol: "https" %>
-      <br>
-      <%= link_to "Edit", edit_guardian_profile_path %>
-    </p>
-  <% end %>
+<div class="col-lg-6 col-lg-offset-3 text-center">
+  <h1> <%= @user.first_name %>'s Guardians </h1>
+  <%= link_to "Add Guardian", new_guardian_profile_path %>
+</div>
+<div id="main-container" class="container-fluid">
+  <div class="row">
+    <div id="sidebar" class="col-xs-3" style="padding-left: 25px;">
+        <% @guardians.each do |guardian| %>
+        <h3><%= link_to guardian.title, guardian_profile_path(guardian)%></h3>
+        <%= image_tag guardian.image.url(:thumb), protocol: "https" %>
+        <%= link_to "Edit", edit_guardian_profile_path %>
+      <% end %>
+    </div>
+  </div>
+  <div id="main-content" class="col-xs-9">
+  </div>
 </div>
