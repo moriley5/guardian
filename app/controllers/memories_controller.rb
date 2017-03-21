@@ -35,7 +35,6 @@ class MemoriesController < ApplicationController
   end
 
   private
-
   def memory_params
     params.require(:memory).permit(:guardian_id, :description, :audio, :date)
   end
