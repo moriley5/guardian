@@ -21,6 +21,7 @@ body {
   width: 90%;
   border-radius: 10px;
   margin-bottom: 5px;
+  background-color: #14141f;
 }
 
 /*#main-container {
@@ -29,11 +30,17 @@ body {
 }*/
 
 .index-prompt {
-  font-size: small;
+  font-size: x-small;
+}
+
+.userpage-avatar-image {
+  width: 33%;
+  border: 2px solid;
+  border-radius: 25px;
 }
 
 .avatar-image {
-  width: 33%;
+  width: 100%;
   border: 2px solid;
   border-radius: 25px;
 }
@@ -44,6 +51,10 @@ body {
 
 .form-control {
   background-color: #b3b3cc;
+}
+
+.settings-icon {
+  float: right;
 }
 
 .new-guardian-form {
@@ -64,3 +75,30 @@ body {
 .new-user-form {
   padding: 10px;
 }
+
+.col-md-6 {
+  display: inline-block;
+}
+.audio-controls {
+  width: 100%;
+}
+
+#guardian-title {
+  margin-top: 38%;
+  width: 100%;
+}
+
+.memories-container {
+  margin-top: 53%;
+}
+
+.notes-container {
+  margin-top: 10%;
+  padding-left: 20px;
+}
+
+.form-row {
+  position: absolute;
+  bottom: 0;
+}
+

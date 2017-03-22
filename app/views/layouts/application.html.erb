@@ -13,14 +13,13 @@
 </head>
 <body>
     <nav class="main-page-nav navbar navbar-default" role="navigation">
-      <div >
         <% if !logged_in? %>
           <div >
             <%= link_to "Login",
                 { :controller => 'sessions', :action => 'new'},
                 :class => "navbar-brand"  %>
           </div>
-          <div >
+          <div>
             <%= link_to "Register",
                 { :controller => 'users', :action => 'new' },
                 :class => "navbar-brand"  %>
@@ -29,16 +28,15 @@
           <div >
             <%= link_to "Home", user_path(current_user), class: "navbar-brand" %>
           </div>
-          <div >
+          <div>
             <%= link_to "Logout",
                 { :controller => 'sessions', :action => 'destroy' },
                 :class => "navbar-brand"%>
           </div>
         <% end %>
-      </div>
     </nav>
-<div id="main-container" class="container-fluid">
-  <%= yield %>
-</div>
+  <div id="main-container" class="container-fluid">
+    <%= yield %>
+  </div>
 </body>
 </html>
