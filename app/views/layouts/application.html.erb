@@ -13,22 +13,20 @@
 </head>
 <body>
     <nav class="main-page-nav navbar navbar-default" role="navigation">
-      <div >
+      <div>
         <% if !logged_in? %>
           <div >
-            <%= link_to "Login", new_session_path, :class => "navbar-brand"  %>
+            <%= link_to "Login", new_session_path, remote: true, :class => "navbar-brand"  %>
           </div>
           <div >
-            <%= link_to "Register", new_user_path, :class => "navbar-brand"  %>
+            <%= link_to "Register", new_user_path, remote: true, :class => "navbar-brand"  %>
           </div>
         <% else %>
           <div >
             <%= link_to "Home", user_path(current_user), class: "navbar-brand" %>
           </div>
           <div >
-            <%= link_to "Logout",
-                { :controller => 'sessions', :action => 'destroy' },
-                :class => "navbar-brand"%>
+            <%= link_to "Logout", logout_path, :class => "navbar-brand"%>
           </div>
         <% end %>
       </div>

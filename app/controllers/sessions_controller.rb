@@ -3,6 +3,10 @@ class SessionsController < ApplicationController
     if logged_in?
       redirect_to user_path(current_user)
     end
+    respond_to do |format|
+      format.html {}
+      format.js {}
+    end
   end
 
   def create

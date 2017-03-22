@@ -11,7 +11,7 @@
       <%= f.submit "Register"%>
     <% end %><br
     <div class="login-or-reg-link">
-      <p class="index-prompt">Already registered? <%= link_to " Login", new_session_path, style: "font-size: small" %></p>
+      <p class="index-prompt">Already registered? <%= link_to " Login", new_session_path, remote: true, style: "font-size: small" %></p>
     </div>
   </div>
 </div>
