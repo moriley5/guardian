@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
 
@@ -26,8 +25,8 @@ messageCouldntHear = "I couldn't hear you, could you say that again?",
 messageInternalError = "Oh no, there has been an internal server error",
 messageSorry = "I'm sorry, I don't have the answer to that yet.";
 
-$(document).ready(function() {
 
+$(document).ready(function() {
     $speechInput = $("#speech");
     $recBtn = $("#rec");
     $speechInput.keypress(function(event) {
@@ -37,12 +36,13 @@ $(document).ready(function() {
         }
     });
     $recBtn.on("click", function(event) {
+        event.preventDefault();
         switchRecognition();
     });
-    $(".debug__btn").on("click", function() {
-        $(this).next().toggleClass("is-active");
-        return false;
-    });
+    // $(".debug__btn").on("click", function() {
+    //     $(this).next().toggleClass("is-active");
+    //     return false;
+    // });
 });
 
 // To use the HTML5 Speech Recognition API
@@ -115,8 +115,12 @@ function send() {
                 url: '/users',
                 data: guardian
               }).done(function(response){
-                $("div.audio").remove()
-                $("div#main-container").append(response);
+                $(".audio-3000").remove()
+
+                setTimeout(function(){
+                    $("div.append-audio").append(response);
+                    $(".audio-3000").trigger('play')
+                }, 2000);
               })
             }
         },
