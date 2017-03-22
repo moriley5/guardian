@@ -13,7 +13,6 @@
 </head>
 <body>
     <nav class="main-page-nav navbar navbar-default" role="navigation">
-      <div>
         <% if !logged_in? %>
           <div >
             <%= link_to "Login", new_session_path, remote: true, :class => "navbar-brand"  %>
@@ -29,10 +28,9 @@
             <%= link_to "Logout", logout_path, :class => "navbar-brand"%>
           </div>
         <% end %>
-      </div>
     </nav>
-<div id="main-container" class="container-fluid">
-  <%= yield %>
-</div>
+  <div id="main-container" class="container-fluid">
+    <%= yield %>
+  </div>
 </body>
 </html>

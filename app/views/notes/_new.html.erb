@@ -1,20 +1,10 @@
 <div>
   <%= render '/errors' %>
 
-  <%= form_for [:guardian_profile, @note] do |f| %>
-    <p>
+  <%= bootstrap_form_for [:guardian_profile, @note] do |f| %>
       <%= f.hidden_field :guardian_id, {:value => @guardian.id} %>
-      <%= f.label :title %>
       <%= f.text_field :title %>
-    </p>
-
-    <p>
-      <%= f.label :body %><br>
       <%= f.text_area(:body, cols: 40, rows: 10) %>
-    </p>
-
-    <p>
       <%= f.submit "Post Note" %>
-    </p>
   <% end %>
 </div>
