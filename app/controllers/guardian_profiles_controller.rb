@@ -21,6 +21,7 @@ class GuardianProfilesController < ApplicationController
   def show
     @guardian = GuardianProfile.find_by(id: params[:id])
     @memories = @guardian.memories.sort_by &:date
+    @notes = @guardian.notes
   end
 
   def edit
