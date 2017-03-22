@@ -24,7 +24,7 @@ messageRecording = "Recording...",
 messageCouldntHear = "I couldn't hear you, could you say that again?",
 messageInternalError = "Oh no, there has been an internal server error",
 messageSorry = "I'm sorry, I don't have the answer to that yet.";
-
+//
 
 $(document).ready(function() {
     $speechInput = $("#speech");
