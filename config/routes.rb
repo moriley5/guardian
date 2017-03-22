@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :new, :create, :show]
   resources :sessions, only: [:new, :create]
 
-  resources :guardian_profiles, only: [:new, :create, :show, :edit, :update] do
-    resources :memories, only: [:new, :create, :edit, :update]
+  resources :guardian_profiles, only: [:new, :create, :show, :edit, :update, :destroy] do
+    resources :memories, only: [:new, :create, :edit, :update, :destroy]
     resources :notes, only: [:new, :show, :destroy, :create, :edit, :update]
   end
 

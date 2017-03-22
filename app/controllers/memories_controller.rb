@@ -34,6 +34,13 @@ class MemoriesController < ApplicationController
     end
   end
 
+  def destroy
+    @memory = Memory.find_by(id: params[:id])
+    @guardian = @memory.guardian_profile
+    @memory.destroy
+    redirect_to guardian_profile_path(@guardian)
+  end
+
   private
   def memory_params
     params.require(:memory).permit(:guardian_id, :description, :audio, :date)
