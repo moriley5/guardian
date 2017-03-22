@@ -1,10 +1,18 @@
-.navbar {
-  margin-bottom: 1px !important;
-}
-
 * {
   background-color: #1f1f2e;
   color: #f5f4f6;
+  border-radius: 10px;
+}
+
+body {
+}
+
+#main-container {
+  margin-top: -18px;
+}
+
+.index-prompt {
+  font-size: small;
 }
 
 .avatar-image {
@@ -13,17 +21,29 @@
   border-radius: 25px;
 }
 
-.edit-image {
+.form-preview-image {
   border: 2px solid;
-  border-radius: 10px;
 }
 
-.form-field {
-  background-color: blue
+.form-control {
+  background-color: #b3b3cc;
 }
 
-
-h1 h2 h3 {
-  margin-top: 1px;
-  margin-bottom: 1px;
+.new-guardian-form {
+  padding: 10px;
+}
+.edit-guardian-form {
+  padding: 10px;
+}
+.new-memory-form {
+  padding: 10px;
+}
+.edit-memory-form {
+  padding: 10px;
+}
+.new-session-form {
+  padding: 10px;
+}
+.new-user-form {
+  padding: 10px;
 }

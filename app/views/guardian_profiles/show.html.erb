@@ -1,4 +1,4 @@
-<div id="main-container" class="container-fluid">
+<div class="guardian-show"
   <div class="col-ms-6">
     <h1> <%= @guardian.title %> </h1>
     <%= image_tag @guardian.image.url, protocol: "https", class: "avatar-image"  %>
@@ -8,8 +8,8 @@
   <div class="col-ms-6">
     <% @memories.each do |memory| %>
         <h3><%= memory.description %></h3>
-        <%= audio_tag memory.audio.url, controls: true, autoplay: false, protocol: "https"  %>
         <p><%= memory.formatted_date %></p>
+        <%= audio_tag memory.audio.url, controls: true, autoplay: false, protocol: "https", class: "audio-controls"  %>
         <p><%= link_to "Edit", edit_guardian_profile_memory_path(@guardian, memory) %></p>
     <% end %>
   </div>

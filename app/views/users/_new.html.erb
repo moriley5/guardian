@@ -1,20 +1,17 @@
-<div class="registration-container">
-    <h2 class="heading">User Registration</h2>
-
-    <%= render '/errors' %>
-
-    <div>
-      <%= bootstrap_form_for @user do |f| %>
-        <%= f.text_field :first_name, class: "form-field" %>
-        <%= f.text_field :last_name, class: "form-field"  %>
-        <%= f.text_field :email, class: "form-field"  %>
-        <%= f.password_field :password, class: "form-field"  %>
-        <%= f.password_field :password_confirmation, class: "form-field"  %>
-        <%= f.submit "Register"%>
-      <% end %>
-      <div class="login-or-reg-link">
-        <p>If you're already registered, <%= link_to " login here", new_session_path %></p>
-      </div>
+<div class="new-user-form">
+  <h3 class="heading">User Registration</h3>
+  <%= render '/errors' %>
+  <div>
+    <%= bootstrap_form_for @user do |f| %>
+      <%= f.text_field :first_name, class: "form-field" %>
+      <%= f.text_field :last_name, class: "form-field"  %>
+      <%= f.text_field :email, class: "form-field"  %>
+      <%= f.password_field :password, class: "form-field"  %>
+      <%= f.password_field :password_confirmation, class: "form-field"  %>
+      <%= f.submit "Register"%>
+    <% end %><br
+    <div class="login-or-reg-link">
+      <p class="index-prompt">If you're already registered, <%= link_to " login here", new_session_path, style: "font-size: small" %></p>
     </div>
-
+  </div>
 </div>

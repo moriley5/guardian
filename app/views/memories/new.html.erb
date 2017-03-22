@@ -1,10 +1,1 @@
-<h1>New Memory</h1>
-<%= render '/errors' %>
-<%= bootstrap_form_for [:guardian_profile, @memory] do |f| %>
-  <%= f.hidden_field :guardian_id, {:value => @guardian.id} %>
-  <%= f.text_field :description %>
-  <%= f.file_field :audio %>
-  <%= f.date_field :date %>
-  <%= f.submit "Add Memory" %>
-<% end %>
-
+<%= render 'new' %>

@@ -1,3 +1,5 @@
 <div class="index-page">
-    <%= render 'users/new' %>
+  <% if !logged_in? %>
+    <%= render 'sessions/new' %>
+  <% end %>
 </div>

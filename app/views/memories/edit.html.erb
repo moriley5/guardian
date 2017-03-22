@@ -1,29 +1,3 @@
-<h1>Edit Memory</h1>
-
-<%= render '/errors' %>
-
-<div>
-  <%= form_for [:guardian_profile, @memory], {url: guardian_profile_memory_path, method: :put} do |f| %>
-    <p>
-      <%= f.label :description %><br>
-      <%= f.text_area :description %>
-    </p>
-
-    <p>
-      <%= f.label :audio %>
-      <%= f.file_field :audio %>
-    </p>
-
-    <p>
-      <%= f.label "Date of Memory" %>
-      <%= f.date_field :date %>
-    </p>
-
-    <p>
-      <%= f.submit "Update" %>
-    </p>
-  <% end %>
-</div>
-
+<%= render 'edit' %>
 
 

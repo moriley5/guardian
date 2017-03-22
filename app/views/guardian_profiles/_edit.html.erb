@@ -4,9 +4,9 @@
   <%= bootstrap_form_for @guardian, {url: guardian_profile_path, method: :put} do |f| %>
     <%= f.text_field :title%>
       <% if @guardian.image.exists? %>
-        <%= image_tag @guardian.image.url(:thumb), class: "edit-image" %>
+        <%= image_tag @guardian.image.url(:thumb), class: "form-preview-image" %>
       <% end %>
-    <%= f.file_field :image %>
+    <%= f.file_field :image, class: "file_field_image" %>
     <%= f.submit "Update" %>
   <% end %>
 </div>
