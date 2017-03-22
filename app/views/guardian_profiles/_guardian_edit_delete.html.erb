@@ -1,0 +1,4 @@
+<span class="hidden">
+  <%= link_to "mode_edit", edit_guardian_profile_path(@guardian), class: "material-icons" %>
+  <%= link_to "delete", guardian_profile_path(@guardian), data: {:confirm => 'Are you sure?'}, method: "delete", class: "material-icons" %>
+</span>

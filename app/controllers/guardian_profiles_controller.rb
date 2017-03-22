@@ -1,6 +1,10 @@
 class GuardianProfilesController < ApplicationController
 
   def index
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js { render 'settings'}
+    end
   end
 
   def new
