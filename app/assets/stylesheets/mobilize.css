@@ -4,7 +4,10 @@
   border-radius: 10px;
 }
 
-body {
+.navbar {
+  background-color: #1f1f2e;
+  color: #f5f4f6;
+  border-radius: 10px;
 }
 
 #main-container {
