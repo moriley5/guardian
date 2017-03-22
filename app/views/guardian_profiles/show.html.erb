@@ -15,5 +15,12 @@
   </div>
 </div>
 
+<h3>Notes</h3>
+<%= link_to "Add Note",new_guardian_profile_note_path(@guardian) %>
+
+<% @notes.each do |note| %>
+  <p><%= note.title %></p>
+  <p><%= note.body %></p>
+<% end %>
 
 

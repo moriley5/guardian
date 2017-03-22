@@ -10,6 +10,7 @@
     </div>
     <%= link_to "Add Guardian", new_guardian_profile_path, style: "font-size: large" %>
   </div>
+
   <div class="col-lg-6 col-lg-offset-3 text-center">
     <% @guardians.each do |guardian| %>
       <h3><%= link_to guardian.title, guardian_profile_path(guardian)%></h3>
@@ -18,5 +19,13 @@
         <%= link_to "Edit", edit_guardian_profile_path, style: "font-size: xx-small" %>
       </div>
     <% end %>
+    
+    <% if @guardians.count >= 1 %>
+        <input id="speech" type="text">
+        <button id="rec" class="btn">Speak</button>
+        <div id="spokenResponse" class="spoken-response">
+          <div class="spoken-response__text"></div>
+        </div>
+     <% end %>
   </div>
 </div>

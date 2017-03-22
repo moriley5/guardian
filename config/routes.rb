@@ -7,8 +7,10 @@ Rails.application.routes.draw do
 
   resources :guardian_profiles, only: [:new, :create, :show, :edit, :update] do
     resources :memories, only: [:new, :create, :edit, :update]
+    resources :notes, only: [:new, :create, :edit, :update]
   end
 
   get '/logout', to: 'sessions#destroy', as: :logout
 
 end
+

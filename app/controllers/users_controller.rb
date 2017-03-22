@@ -4,8 +4,8 @@ class UsersController < ApplicationController
     if request.xhr?
       @guardians = current_user.guardian_profiles
       @guardians.each do |guardian|
-        if guardian.title == request.query_string
-          @memory = guardian.memories.first
+        if request.query_string.downcase.include?(guardian.title.downcase)
+          @memory = guardian.memories.sample
         end
       end
         render '_audio', layout: false, locals: {memory: @memory} and return
@@ -35,7 +35,6 @@ class UsersController < ApplicationController
   end
 
   private
-
   def find_user
     @user = User.find_by(id: params[:id])
   end

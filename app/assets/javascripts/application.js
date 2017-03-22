@@ -115,6 +115,7 @@ function send() {
                 url: '/users',
                 data: guardian
               }).done(function(response){
+                $("div.audio").remove()
                 $("div#sidebar").append(response);
               })
             }
