@@ -3,14 +3,12 @@ class UsersController < ApplicationController
   def index
     if request.xhr?
       @guardians = current_user.guardian_profiles
-      binding.pry
       @guardians.each do |guardian|
         if request.query_string.downcase.include?(guardian.title.downcase)
           @memory = guardian.memories.sample
         end
       end
-      binding.pry
-        render '_audio', layout: false, locals: {memory: @memory} and return
+      render '_audio', layout: false, locals: {memory: @memory} and return
     end
   end
 

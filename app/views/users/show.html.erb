@@ -12,12 +12,12 @@
      <% end %>
     </div>
   </div>
-  <div class="col-lg-6 col-lg-offset-3 text-center">
+  <div class="col-lg-6 col-lg-offset-3 text-center append-audio">
     <% @guardians.each do |guardian| %>
       <h3><%= link_to guardian.title, guardian_profile_path(guardian)%></h3>
       <%= image_tag guardian.image.url, protocol: "https", class: "avatar-image" %>
       <div class="col-lg-6 col-lg-offset-3 text-center">
-        <%= link_to "Edit", edit_guardian_profile_path, style: "font-size: xx-small" %>
+        <%= link_to "Edit", edit_guardian_profile_path(guardian), style: "font-size: xx-small" %>
       </div>
     <% end %>
   </div>
