@@ -1,16 +1,19 @@
-<div class="guardian-show"
+<div class="guardian-show">
   <div class="col-ms-6">
     <h1> <%= @guardian.title %> </h1>
-    <%= image_tag @guardian.image.url, protocol: "https", class: "avatar-image"  %>
+    <p><%= link_to "Delete", guardian_profile_path(@guardian), data: {:confirm => 'Are you sure?'}, method: "delete" %></p>
+    <%= image_tag @guardian.image.url, protocol: "https", class: "avatar-image" %>
 
     <%= link_to "Add Memory", new_guardian_profile_memory_path(@guardian) %>
   </div>
+
   <div class="col-ms-6">
     <% @memories.each do |memory| %>
         <h3><%= memory.description %></h3>
         <p><%= memory.formatted_date %></p>
         <%= audio_tag memory.audio.url, controls: true, autoplay: false, protocol: "https", class: "audio-controls"  %>
         <p><%= link_to "Edit", edit_guardian_profile_memory_path(@guardian, memory) %></p>
+        <p><%= link_to "Delete", guardian_profile_memory_path(@guardian, memory), data: {:confirm => 'Are you sure?'}, method: "delete" %></p>
     <% end %>
   </div>
 </div>
@@ -19,7 +22,7 @@
 <%= link_to "Add Note",new_guardian_profile_note_path(@guardian) %>
 
 <% @notes.each do |note| %>
-  <p><%= note.title %></p>
+  <p><%= link_to note.title, guardian_profile_note_path(@guardian, note) %></p>
   <p><%= note.body %></p>
 <% end %>
 

@@ -1,12 +1,16 @@
 <div class="guardian-edit-form">
   <h3>Edit Guardian</h3>
   <%= render '/errors' %>
-  <%= bootstrap_form_for @guardian, {url: guardian_profile_path, method: :put} do |f| %>
+
+  <%= bootstrap_form_for @guardian, {url: guardian_profile_path, method: "patch"} do |f| %>
+
     <%= f.text_field :title%>
       <% if @guardian.image.exists? %>
         <%= image_tag @guardian.image.url(:thumb), class: "form-preview-image" %>
       <% end %>
+
     <%= f.file_field :image, class: "file_field_image" %>
+
     <%= f.submit "Update" %>
   <% end %>
 </div>
