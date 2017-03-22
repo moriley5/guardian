@@ -1,29 +1,38 @@
 <div class="guardian-show">
+  <div><%= link_to "settings", guardian_profiles_path, class: 'material-icons', remote: true %></div>
   <div class="col-ms-6">
-    <h1> <%= @guardian.title %> </h1>
-    <p><%= link_to "Delete", guardian_profile_path(@guardian), data: {:confirm => 'Are you sure?'}, method: "delete" %></p>
-    <%= image_tag @guardian.image.url, protocol: "https", class: "avatar-image" %>
+    <h1 id="guardian-title"> <%= @guardian.title %>
+      <span style="display: none">
+        <%= link_to "mode_edit", edit_guardian_profile_path(@guardian), class: "material-icons" %>
+        <%= link_to "delete", guardian_profile_path(@guardian), data: {:confirm => 'Are you sure?'}, method: "delete", class: "material-icons" %>
+      </span>
+    </h1>
 
-    <%= link_to "Add Memory", new_guardian_profile_memory_path(@guardian) %>
+    <%= image_tag @guardian.image.url, protocol: "https", class: "avatar-image" %>
   </div>
 
+  <h2>Memories <%= link_to "note_add", new_guardian_profile_memory_path(@guardian), class: "material-icons" %></h2>
   <div class="col-ms-6">
     <% @memories.each do |memory| %>
-        <h3><%= memory.description %></h3>
+      <h4 id="memory-title"><%= memory.description %>
+        <span style="display: none">
+          <%=link_to "mode_edit", edit_guardian_profile_memory_path(@guardian, memory), class: "material-icons" %>
+          <%= link_to "delete", guardian_profile_memory_path(@guardian, memory), data: {:confirm => 'Are you sure?'}, method: "delete", class: "material-icons" %>
+        </span>
+      </h4>
         <p><%= memory.formatted_date %></p>
-        <%= audio_tag memory.audio.url, controls: true, autoplay: false, protocol: "https", class: "audio-controls"  %>
-        <p><%= link_to "Edit", edit_guardian_profile_memory_path(@guardian, memory) %></p>
-        <p><%= link_to "Delete", guardian_profile_memory_path(@guardian, memory), data: {:confirm => 'Are you sure?'}, method: "delete" %></p>
+        <%= audio_tag memory.audio.url, controls: true, autoplay: false, protocol: "https", class: "audio-controls" %>
     <% end %>
   </div>
+
+  <div>
+    <h2 id="note-title">Notes <%= link_to "note_add",new_guardian_profile_note_path(@guardian), class: "material-icons" %></h2>
+
+    <% @notes.each do |note| %>
+      <h4><%= link_to note.title, guardian_profile_note_path(@guardian, note) %></h4>
+      <p><%= note.body %></p>
+    <% end %>
+  </div>
+
+
 </div>
-
-<h3>Notes</h3>
-<%= link_to "Add Note",new_guardian_profile_note_path(@guardian) %>
-
-<% @notes.each do |note| %>
-  <p><%= link_to note.title, guardian_profile_note_path(@guardian, note) %></p>
-  <p><%= note.body %></p>
-<% end %>
-
-
