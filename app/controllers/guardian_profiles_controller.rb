@@ -42,6 +42,12 @@ class GuardianProfilesController < ApplicationController
     end
   end
 
+  def destroy
+    @guardian = GuardianProfile.find_by(id: params[:id])
+    @guardian.destroy
+    redirect_to root_path(current_user)
+  end
+
   private
   def guardian_params
     params.require(:guardian_profile).permit(:user_id, :title, :image)

@@ -1,6 +1,7 @@
 <div class="guardian-show">
   <div class="col-ms-6">
     <h1> <%= @guardian.title %> </h1>
+    <p><%= link_to "Delete", guardian_profile_path(@guardian), data: {:confirm => 'Are you sure?'}, method: "delete" %></p>
     <%= image_tag @guardian.image.url, protocol: "https", class: "avatar-image" %>
 
     <%= link_to "Add Memory", new_guardian_profile_memory_path(@guardian) %>
