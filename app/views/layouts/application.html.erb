@@ -16,14 +16,10 @@
       <div >
         <% if !logged_in? %>
           <div >
-            <%= link_to "Login",
-                { :controller => 'sessions', :action => 'new'},
-                :class => "navbar-brand"  %>
+            <%= link_to "Login", new_session_path, :class => "navbar-brand"  %>
           </div>
           <div >
-            <%= link_to "Register",
-                { :controller => 'users', :action => 'new' },
-                :class => "navbar-brand"  %>
+            <%= link_to "Register", new_user_path, :class => "navbar-brand"  %>
           </div>
         <% else %>
           <div >
