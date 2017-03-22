@@ -25,4 +25,10 @@ class ApplicationController < ActionController::Base
     redirect_to root_path if !logged_in?
   end
 
+  def index
+    if logged_in?
+      redirect_to user_path(current_user)
+    end
+  end
+
 end
