@@ -1,5 +1,8 @@
 class SessionsController < ApplicationController
   def new
+    if logged_in?
+      redirect_to user_path(current_user)
+    end
   end
 
   def create
@@ -11,10 +14,5 @@ class SessionsController < ApplicationController
       @errors = ["Invalid credentials"]
       render 'new'
     end
-  end
-
-  def destroy
-    session.clear
-    redirect_to root_path
   end
 end
