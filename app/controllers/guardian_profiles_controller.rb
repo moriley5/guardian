@@ -9,7 +9,6 @@ class GuardianProfilesController < ApplicationController
 
   def create
     @guardian = GuardianProfile.new(guardian_params)
-
     if @guardian.save
       redirect_to user_path(current_user)
     else

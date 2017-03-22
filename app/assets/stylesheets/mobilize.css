@@ -1,0 +1,49 @@
+* {
+  background-color: #1f1f2e;
+  color: #f5f4f6;
+  border-radius: 10px;
+}
+
+body {
+}
+
+#main-container {
+  margin-top: -18px;
+}
+
+.index-prompt {
+  font-size: small;
+}
+
+.avatar-image {
+  width: 33%;
+  border: 2px solid;
+  border-radius: 25px;
+}
+
+.form-preview-image {
+  border: 2px solid;
+}
+
+.form-control {
+  background-color: #b3b3cc;
+}
+
+.new-guardian-form {
+  padding: 10px;
+}
+.edit-guardian-form {
+  padding: 10px;
+}
+.new-memory-form {
+  padding: 10px;
+}
+.edit-memory-form {
+  padding: 10px;
+}
+.new-session-form {
+  padding: 10px;
+}
+.new-user-form {
+  padding: 10px;
+}

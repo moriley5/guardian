@@ -26,6 +26,11 @@ class ApplicationController < ActionController::Base
   end
 
   def index
+    if !logged_in?
+      @user = User.new
+    else
+      redirect_to controller: 'users', action: 'show', id: current_user.id
+    end
   end
 
 end
