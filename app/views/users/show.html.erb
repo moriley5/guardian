@@ -1,11 +1,11 @@
 <div class="user-show">
   <div class="col-lg-6 col-lg-offset-3 text-center">
     <h1> <%= @user.first_name %>'s Guardians </h1>
-    <%= link_to "Add Guardian", new_guardian_profile_path, style: "font-size: large;" %>
+    <%= link_to "Add Guardian", new_guardian_profile_path, style: "font-size: large;" %><br><br>
     <div class="col-lg-6 col-lg-offset-3 text-center">
     <% if @guardians.count >= 1 %>
       <input id="speech" type="text" style="padding-left: 20px;">
-      <button id="rec" class="btn">Speak</button>
+      <div><button id="rec" class="btn">Speak</button></div>
       <div id="spokenResponse" class="spoken-response">
         <div class="spoken-response__text"></div>
       </div>
