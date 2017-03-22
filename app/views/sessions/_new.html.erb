@@ -9,7 +9,7 @@
         <%= f.submit "Login"%>
     <% end %><br>
     <div class="login-or-reg-link">
-      <p class="index-prompt">New to Guardian? <%= link_to " Sign Up", new_user_path, style: "font-size: small" %></p>
+      <p class="index-prompt">New to Guardian? <%= link_to " Sign Up", new_user_path, remote: true, style: "font-size: small" %></p>
     </div>
   </div>
 </div>
