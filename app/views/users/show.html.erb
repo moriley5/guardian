@@ -1,11 +1,11 @@
 <div class="user-show">
   <div class="col-lg-6 col-lg-offset-3 text-center">
-    <h1> <%= @user.first_name %>'s Guardians </h1>
-    <%= link_to "Add Guardian", new_guardian_profile_path, style: "font-size: large;" %><br><br>
+    <h1> <%= @user.first_name %>'s Guardians <%= link_to "library_add", new_guardian_profile_path, class: "material-icons", style: "font-size: large;" %></h1>
+    <br><br>
     <div class="col-lg-6 col-lg-offset-3 text-center">
     <% if @guardians.count >= 1 %>
       <input id="speech" type="text" style="padding-left: 20px;">
-      <div><button id="rec" class="btn">Speak</button></div>
+      <div><button id="rec" class="btn material-icons">mic</button></div>
       <div id="spokenResponse" class="spoken-response">
         <div class="spoken-response__text"></div>
       </div>
@@ -16,9 +16,6 @@
     <% @guardians.each do |guardian| %>
       <h3><%= link_to guardian.title, guardian_profile_path(guardian)%></h3>
       <%= image_tag guardian.image.url, protocol: "https", class: "avatar-image" %>
-      <div class="col-lg-6 col-lg-offset-3 text-center">
-        <%= link_to "Edit", edit_guardian_profile_path(guardian), style: "font-size: xx-small" %>
-      </div>
     <% end %>
   </div>
 </div>
