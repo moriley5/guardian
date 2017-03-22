@@ -116,7 +116,7 @@ function send() {
                 data: guardian
               }).done(function(response){
                 $("div.audio").remove()
-                $("div#sidebar").append(response);
+                $("div#main-container").append(response);
               })
             }
         },

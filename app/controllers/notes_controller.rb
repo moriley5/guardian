@@ -42,6 +42,12 @@ class NotesController < ApplicationController
     end
   end
 
+  def destroy
+    @note = Note.find_by(id: params[:id])
+    @note.destroy
+    redirect_to guardian_profile_path(@note.guardian_profile)
+  end
+
   private
 
   def notes_params

@@ -24,7 +24,7 @@ class MemoriesController < ApplicationController
     if @memory
       @memory.update(memory_params)
       if @memory.save
-        redirect_to guardian_profile_path(@guardian)
+        redirect_to guardian_profile_path(@memory.guardian_profile)
       else
         @errors = @memory.errors.full_messages
         render 'edit'
