@@ -37,7 +37,7 @@ class UsersController < ApplicationController
     authorize_to_view(@user.id) if @user
     @user = current_user
     @guardian = GuardianProfile.new
-    @guardians = @user.guardian_profiles.sort_by &:title
+    @guardians = @user.guardian_profiles.order(created_at: :asc)
   end
 
   private
