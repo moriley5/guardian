@@ -91,7 +91,7 @@ function setInput(text) {
     send();
 }
 function updateRec() {
-    $recBtn.text(recognition ? "Stop" : "Speak");
+    $recBtn.text(recognition ? "" : "");
 }
 
 // To send off query to Api.ai
