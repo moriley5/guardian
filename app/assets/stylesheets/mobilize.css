@@ -26,6 +26,7 @@ body {
 
 .btn {
   background-color: #14141f;
+  color: white;
 }
 
 /*#main-container {
@@ -35,6 +36,10 @@ body {
 
 .index-prompt {
   font-size: x-small;
+}
+
+.login-prompt {
+  font-size: small;
 }
 
 .userpage-avatar-image {
@@ -110,5 +115,26 @@ body {
 .user-show-form-row {
   position: absolute;
   bottom: 0;
+}
+
+.team-logo {
+  padding: 2%;
+  width: 20%;
+  height: 20%;
+  margin: auto;
+}
+
+.navbar-brand {
+  margin-top: 5%;
+  font-size: medium;
+  padding: 4%;
+}
+
+.app-title {
+  margin: 0 auto;
+}
+
+.welcome-header {
+  text-align: center; color: #428bca;
 }
 
