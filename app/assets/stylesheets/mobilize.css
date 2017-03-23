@@ -68,6 +68,7 @@ body {
 
 .new-guardian-form {
   padding: 10px;
+  display: none;
 }
 .edit-guardian-form {
   padding: 10px;
