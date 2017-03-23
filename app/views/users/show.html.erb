@@ -1,6 +1,6 @@
 <div class="user-show">
   <div class="col-lg-6 col-lg-offset-3 text-center">
-    <h1> <%= @user.first_name %>'s Guardians <%= link_to "library_add", new_guardian_profile_path, class: "material-icons", style: "font-size: large;" %></h1>
+    <h1 class="welcome-header"> <%= @user.first_name.capitalize %>'s Guardians <%= link_to "library_add", new_guardian_profile_path, class: "material-icons", style: "font-size: large;" %></h1>
     <br><br>
     <div class="col-lg-6 col-lg-offset-3 text-center">
     <% if @guardians.count >= 1 %>
@@ -17,7 +17,7 @@
       <h2>
         <%= link_to guardian.title, guardian_profile_path(guardian)%>
       </h2>
-      <%= image_tag guardian.image.url, protocol: "https", class: "userpage-avatar-image" %>
+      <%= image_tag guardian.image.url(:medium), protocol: "https", class: "userpage-avatar-image" %>
     <% end %>
   </div>
   <div class="user-show-form-row col-lg-6 col-lg-offset-3 text-center bottom-align-text" >
