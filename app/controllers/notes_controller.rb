@@ -16,11 +16,6 @@ class NotesController < ApplicationController
 
   end
 
-  def show
-    @note = Note.find_by(id: params[:id])
-    @guardian = GuardianProfile.find_by(id: params[:guardian_profile_id])
-  end
-
   def edit
     @note = Note.find_by(id: params[:id])
     @guardian = GuardianProfile.find_by(id: params[:guardian_profile_id])
