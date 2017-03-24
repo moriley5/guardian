@@ -43,13 +43,14 @@ body {
 }
 
 .userpage-avatar-image {
+  height: 100px;
   width: 33%;
   border: 2px solid;
   border-radius: 25px;
 }
 
 .avatar-image {
-  width: 100%;
+  width: 65%;
   border: 2px solid;
   border-radius: 25px;
 }
@@ -65,7 +66,7 @@ body {
 .settings-icon {
   float: right;
 }
-
+/*
 .new-guardian-form {
   padding: 10px;
   display: none;
@@ -93,19 +94,13 @@ body {
   width: 100%;
 }
 
-#guardian-title {
-  margin-top: 38%;
-  width: 100%;
-}
+
 
 .memories-container {
   margin-top: 53%;
 }
 
-.notes-container {
-  margin-top: 10%;
-  padding-left: 20px;
-}
+
 
 .guardian-show-form-row {
   position: absolute;
@@ -115,13 +110,21 @@ body {
 .user-show-form-row {
   position: absolute;
   bottom: 0;
+}*/
+#guardian-title {
+  margin-left: 5%;
+}
+
+.notes-container {
+  padding-left: 20px;
 }
 
 .team-logo {
+  text-align: center;
+  float: right;
   padding: 2%;
   width: 20%;
   height: 20%;
-  margin: auto;
 }
 
 .navbar-brand {
