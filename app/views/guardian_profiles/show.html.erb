@@ -1,6 +1,7 @@
 <div class="guardian-show">
-
-  <div class="settings-icon"><%= link_to "settings", guardian_profiles_path, class: 'material-icons', remote: true %></div>
+  <div class="settings-icon">
+    <%= link_to "settings", guardian_profiles_path, class: 'material-icons', remote: true %>
+  </div>
 
   <div class="row">
     <div class="col-sm-6">
@@ -30,6 +31,7 @@
           <%= audio_tag memory.audio.url, controls: true, autoplay: false, protocol: "https", class: "audio-controls" %>
       <% end %>
     </div>
+
     <div class="col-sm-6 notes-container">
       <h3 id="note-title">Notes <%= link_to "note_add",new_guardian_profile_note_path(@guardian), class: "material-icons" %>
       </h3>
