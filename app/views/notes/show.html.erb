@@ -1,8 +1,0 @@
-<div>
-  <h2> <%= @note.title %></h2>
-  <p> <%= @note.body %></p>
-
-  <%= link_to "Edit", edit_guardian_profile_note_path() %>
-
-  <%= link_to "Delete", guardian_profile_note_path, data: {:confirm => 'Are you sure?'}, method: "delete" %>
-</div>

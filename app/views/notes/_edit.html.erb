@@ -1,7 +1,7 @@
 <div>
   <%= render '/errors' %>
 
-  <%= form_for @note, url: guardian_profile_note_path do |f| %>
+  <%= bootstrap_form_for @note, url: guardian_profile_note_path do |f| %>
     <p>
       <%= f.hidden_field :guardian_id, {:value => @guardian.id} %>
       <%= f.label :title %>
