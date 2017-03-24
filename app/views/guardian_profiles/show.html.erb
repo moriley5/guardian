@@ -1,44 +1,49 @@
 <div class="guardian-show">
-  <div class="col-xs-6">
-    <div class="row">
-    <h2 id="guardian-title"> <%= @guardian.title %>
+  <div class="settings-icon">
+    <%= link_to "settings", guardian_profiles_path, class: 'material-icons', remote: true %>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h2 id="guardian-title"> <%= @guardian.title %>
       <span style="display: none">
         <%= link_to "mode_edit", edit_guardian_profile_path(@guardian), class: "material-icons" %>
         <%= link_to "delete", guardian_profile_path(@guardian), data: {:confirm => 'Are you sure?'}, method: "delete", class: "material-icons" %>
-      </span>
-      </h2>
+      </span></h2>
     </div>
-    <div class="row memories-container">
-      <h4>Memories <%= link_to "note_add", new_guardian_profile_memory_path(@guardian), class: "material-icons" %></h4>
+    <div class="col-sm-6">
+      <%= image_tag @guardian.image.url, protocol: "https", class: "avatar-image" %>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 memories-container">
+      <h3>Memories <%= link_to "note_add", new_guardian_profile_memory_path(@guardian), class: "material-icons" %></h3>
       <% @memories.each do |memory| %>
-        <h5 id="memory-title"><%= memory.description %>
+        <h4 id="memory-title"><%= memory.description %>
           <span style="display: none">
             <%=link_to "mode_edit", edit_guardian_profile_memory_path(@guardian, memory), class: "material-icons" %>
             <%= link_to "delete", guardian_profile_memory_path(@guardian, memory), data: {:confirm => 'Are you sure?'}, method: "delete", class: "material-icons" %>
           </span>
-        </h5>
+        </h4>
           <p class="index-prompt"><%= memory.formatted_date %></p>
           <%= audio_tag memory.audio.url, controls: true, autoplay: false, protocol: "https", class: "audio-controls" %>
       <% end %>
     </div>
-  </div>
 
-  <div class="col-xs-6">
-    <div class="settings-icon"><%= link_to "settings", guardian_profiles_path, class: 'material-icons', remote: true %></div>
-    <%= image_tag @guardian.image.url, protocol: "https", class: "avatar-image" %>
-    <div class="row notes-container">
-      <h4 id="note-title">Notes <%= link_to "note_add",new_guardian_profile_note_path(@guardian), class: "material-icons" %></h4>
-      <% @notes.each do |note| %>
-        <h5><%= note.title %>
-          <span style="display: none">
-            <%= link_to "mode_edit", edit_guardian_profile_note_path(@guardian, note), class: "material-icons" %>
-            <%= link_to "delete", guardian_profile_note_path(@guardian, note), data: {:confirm => 'Are you sure?'}, method: "delete", class: "material-icons" %>
-          </span>
-        </h5>
-        <p><%= note.body %></p>
-      <% end %>
+    <div class="col-sm-6 notes-container">
+      <h3 id="note-title">Notes <%= link_to "note_add",new_guardian_profile_note_path(@guardian), class: "material-icons" %>
+      </h3>
+        <% @notes.each do |note| %>
+          <h4><%= note.title %>
+            <span style="display: none">
+              <%= link_to "edit", edit_guardian_profile_note_path(@guardian, note), class: "material-icons" %>
+              <%= link_to "delete", guardian_profile_note_path(@guardian, note), data: {:confirm => 'Are you sure?'}, method: "delete", class: "material-icons" %>
+            </span>
+          </h4>
+          <p><%= note.body %></p>
+        <% end %>
     </div>
-  </div>
-  <div class="guardian-show-form-row col-sm-6 bottom-align-text" >
   </div>
 </div>
