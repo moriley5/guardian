@@ -2,9 +2,9 @@
 
 ## Summary
 
-*Imagine an app that allows you to connect with and remember a lost loved one. An app that creates a space for you to consolidate all of your memories of that person, in the form of images, audio recordings, and notes. An app that serves as a personal and private outlet for your grief.
+Imagine an app that allows you to connect with and remember a lost loved one. An app that creates a space for you to consolidate all of your memories of that person, in the form of images, audio recordings, and notes. An app that serves as a personal and private outlet for your grief.
 
-Guardian uses artificial intelligence and voice recognition to connect you with those who have passed on in a way that is more engaging, more responsive, and more realistic.*
+Guardian uses artificial intelligence and voice recognition to connect you with those who have passed on in a way that is more engaging, more responsive, and more realistic.
 
 I pitched Guardian as my final capstone project for Dev Bootcamp. In the last eight days of the program, students work in small teams to build something new. I worked on a 4-person team, serving as the project lead, to build and design the app from scratch, which was presented to the faculties and students of Dev Bootcamp at graduation.
 
