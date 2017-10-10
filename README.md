@@ -8,7 +8,7 @@ Guardian uses artificial intelligence and voice recognition to connect you with 
 
 I pitched Guardian as my final capstone project for Dev Bootcamp. In the last eight days of the program, students work in small teams to build something new. I worked on a 4-person team, serving as the project lead, to build and design the app from scratch, which was presented to the faculties and students of Dev Bootcamp at graduation.
 
-We consumed a third party API called API.AI to simulate conversation and generate interaction between users and their guardians. We also used AWS to store the audio recordings and images as well as the Paperclip library to connect the files to our PostgreSQL database.
+We consumed a third party API called Dialogflow (formerly API.AI) to simulate conversation and generate interaction between users and their guardians. We also used AWS to store the audio recordings and images as well as the Paperclip library to connect the files to our PostgreSQL database.
 
 ## Upcoming Features
 
@@ -21,5 +21,5 @@ We consumed a third party API called API.AI to simulate conversation and generat
 
 https://guardian-dbc.herokuapp.com/
 
-https://api.ai/
+https://dialogflow.com/
 
